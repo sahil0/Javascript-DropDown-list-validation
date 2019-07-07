@@ -1,0 +1,42 @@
+<html>
+<script language="Javascript">
+function validate(){
+if(document.form.city.selectedIndex=="" || 
+  document.form.ci.selectedIndex=="")
+{
+alert ( "Please select city!");
+return false;
+}
+var a = document.getElementById('city');
+var b = document.getElementById('ci');
+
+var a1 = a.options[a.selectedIndex].text;
+var b1 = b.options[b.selectedIndex].text;
+    if(a1 == b1)
+    {
+        alert ( "City must be different!");
+return false;
+    }
+return true;
+}
+</script>
+<form name="form" action="#" onSubmit="return validate()"><pre>
+Select your City <select name="city" id="city">
+<option value="Select">Select</option>
+<option value="Delhi">Delhi</option>
+<option value="Jaipur">Jaipur</option>
+<option value="Agra">Agra</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Pune">Pune</option>
+</select>
+Select your City <select name="ci" id="ci">
+<option value="Select">Select</option>
+<option value="Delhi">Delhi</option>
+<option value="Jaipur">Jaipur</option>
+<option value="Agra">Agra</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Pune">Pune</option>
+</select>
+<input type="submit" name="Submit" value="Submit">
+</pre></form>
+</html>
